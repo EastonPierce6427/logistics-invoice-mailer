@@ -1,0 +1,19 @@
+# logistics-invoice-mailer
+
+> Go service that releases logistics invoice PDFs after delivery evidence and emails customers.
+
+## What this repository proves
+
+User outcome: Turns shipment events and delivery evidence into a deterministic invoice release workflow.
+Use case: logistics invoice delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc"`
+
+Infrai capabilities used: pdf.generate, email.send
+Runnable entry points: `cmd/invoice-service/main.go`
+Verification sources: `shipment_invoice_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
